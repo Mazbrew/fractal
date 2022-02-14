@@ -4,7 +4,7 @@ import java.awt.Toolkit;
 import javax.swing.JFrame;
 
 public class Frame extends JFrame{
-    public Frame(Panel panel){
+    public Frame(LayeredPanel panel){
         super();
         this.add(panel);
         this.getContentPane().setPreferredSize(new Dimension(panel.getSize().width,panel.getSize().height));

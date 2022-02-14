@@ -3,17 +3,19 @@ import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
 public class Slider extends JSlider implements ChangeListener{
-    private Panel panel;
-    public Slider(Panel panel){
+    private LayeredPanel LP;
+    public Slider(LayeredPanel LP){
         super(0,180);
-        this.panel=panel;
-        this.setValue(panel.getrotation());
+        this.LP=LP;
+        this.setValue(LP.getPanel().getrotation());
+        this.setSize(300,25);
+        this.setLocation(LP.getsize()/2-this.getSize().width/2,0);
         this.addChangeListener(this);
     }
 
     @Override
     public void stateChanged(ChangeEvent e) {
-        panel.setrotation(this.getValue());
-        panel.repaint();
+        LP.getPanel().setrotation(this.getValue());
+        LP.repaint();
     }
 }

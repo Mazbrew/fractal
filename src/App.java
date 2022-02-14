@@ -1,6 +1,6 @@
 public class App {
     public static void main(String[] args) throws Exception {
-        Panel panel = new Panel(600);
+        LayeredPanel panel = new LayeredPanel(600);
         new Frame(panel);
     }
 }
