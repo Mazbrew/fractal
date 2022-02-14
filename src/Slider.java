@@ -5,7 +5,7 @@ import javax.swing.event.ChangeListener;
 public class Slider extends JSlider implements ChangeListener{
     private LayeredPanel LP;
     public Slider(LayeredPanel LP){
-        super(0,180);
+        super(0,360);
         this.LP=LP;
         this.setValue(LP.getPanel().getrotation());
         this.setSize(300,25);
